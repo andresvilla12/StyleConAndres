@@ -44,3 +44,24 @@
 - 📲 **Diseño responsivo** con fondo gradiente y estilo moderno
 
 ---
+
+## 🛠️ Instalación y uso
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/andresvilla12/StyleConAndres.git
+
+# Entrar al directorio
+cd StyleConAndres
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+npx ng serve
+
+# Compilar para producción
+npx ng build
+```
+
+---
