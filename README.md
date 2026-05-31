@@ -17,6 +17,7 @@
 🔗 [styleconandres.netlify.app](https://styleconandres.netlify.app)
 
 ---
+<img width="1897" height="956" alt="image" src="https://github.com/user-attachments/assets/3cc75cab-61e6-4326-8776-a7935088a379" />
 
 ## 🚀 Tecnologías utilizadas
 
@@ -42,7 +43,6 @@
 - 📲 **Diseño responsivo** con fondo gradiente y estilo moderno
 
 ---
-<img width="1897" height="956" alt="image" src="https://github.com/user-attachments/assets/3cc75cab-61e6-4326-8776-a7935088a379" />
 
 ## 🛠️ Instalación y uso
 
