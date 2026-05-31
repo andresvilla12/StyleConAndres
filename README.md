@@ -10,8 +10,6 @@
 
 **StyleConAndrés** es una tienda online moderna e innovadora desarrollada con Angular, dedicada a ofrecer ropa, accesorios, electrónica, muebles y zapatos para todas las ocasiones. El proyecto consume una API REST pública (Platzi Fake Store API) para mostrar productos reales con imágenes, precios y categorías.
 
-> *"Tu estilo, tu tecnología, tu mundo."*
-
 ---
 
 ## 🌐 Demo en vivo
