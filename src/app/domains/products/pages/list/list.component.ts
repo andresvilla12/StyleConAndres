@@ -49,33 +49,26 @@ export default class ListComponent {
 
   }
 
+  private readonly validCategoryIds = [1, 2, 3, 4, 5];
+
   private getCategories() {
     this.categoryService.getAll()
-    .subscribe({
-      next: (data) => {
-        this.categories.set(
-          data
-            .map(c => {
-              if (c.id === 1) return { ...c, name: 'Clothes' };
-              return c;
-          })
-          .filter(c => 
-            c.name.length < 20 && 
-            c.name !== 'string' && 
-            c.name !== 'HAIYA' &&
-            c.name !== 'sss' &&
-            c.name !== 'New Ctg' &&
-            c.name !== 'category_B' &&
-            !c.name.includes('Updated') &&
-            !c.name.toLowerCase().includes('kategori') &&
-            !c.name.toLowerCase().includes('new') &&
-            !Number(c.name)
-          )
-        );
-      },
-      error: () => {
-      }
-    })
-
-  }
+      .subscribe({
+        next: (data) => {
+          this.categories.set(
+            data
+              .filter(c => this.validCategoryIds.includes(c.id))
+              .map(c => {
+                if (c.name === 'Clothes' || c.id === 1) return { ...c, name: 'Clothes' };
+                if (c.name === 'Electronics' || c.id === 2) return { ...c, name: 'Electronics' };
+                if (c.name === 'Furniture' || c.id === 3) return { ...c, name: 'Furniture' };
+                if (c.name === 'Shoes' || c.id === 4) return { ...c, name: 'Shoes' };
+                if (c.name === 'Miscellaneous' || c.id === 5) return { ...c, name: 'Miscellaneous' };
+                return c;
+              })
+          );
+        },
+        error: () => {}
+      });
+    }
 }

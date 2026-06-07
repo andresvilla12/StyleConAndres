@@ -1,26 +1,26 @@
 <nav>
-  <div class="w-full flex flex-wrap items-center justify-between mx-auto py-4 px-4">
-    <div class="flex items-center space-x-8">
+  <div class="w-full flex flex-nowrap items-center justify-between mx-auto py-2 px-3">
+    <div class="flex items-center space-x-4 md:space-x-8">
       <a href="https://flowbite.com/" class="flex items-center">
-        <img src="assets/logo.png" class="h-10 w-10 mr-3 rounded-full object-cover" alt="StyleWithAndrés"/>
+        <img src="assets/logo.png" class="h-7 w-7 md:h-10 md:w-10 mr-3 rounded-full object-cover" alt="StyleWithAndrés"/>
         <span class="self-center whitespace-nowrap bg-black bg-opacity-30 px-4 py-1 rounded-full font-bold text-lg tracking-wide">
           <span class="text-white">StyleCon</span><span class="text-yellow-400">Andrés</span>
         </span>
       </a>
-      <ul class="flex space-x-6">
+      <ul class="flex space-x-2 md:space-x-4">
         <li>
           <a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link"
-            class="block text-white font-semibold px-4 py-1.5 border-2 border-white rounded-full hover:bg-white hover:text-black transition-all duration-200">
+            class="block text-white font-semibold px-3 py-1 border border-white rounded-full text-xs md:text-sm hover:bg-white hover:text-black transition-all duration-200">
             🛍️ Tienda
-          </a>
-        </li>
-        <li>
-          <a routerLink="/about" routerLinkActive="active-link"
-            class="block text-white font-semibold px-4 py-1.5 border-2 border-white rounded-full hover:bg-white hover:text-black transition-all duration-200">
-            ℹ️ Acerca de Nosotros
-          </a>
-        </li>
-      </ul>
+        </a>
+      </li>
+  <li>
+    <a routerLink="/about" routerLinkActive="active-link"
+      class="block text-white font-semibold px-3 py-1 border border-white rounded-full text-xs md:text-sm hover:bg-white hover:text-black transition-all duration-200">
+      ℹ️ Nosotros
+    </a>
+  </li>
+</ul>
     </div>
     <div class="flex items-center">
       <button class="p-2 border rounded relative" (click)="toogleSideMenu()">
