@@ -1,35 +1,40 @@
 <nav>
   <div class="w-full flex flex-nowrap items-center justify-between mx-auto py-2 px-3">
-    <div class="flex items-center space-x-4 md:space-x-8">
-      <a href="https://flowbite.com/" class="flex items-center">
-        <img src="assets/logo.png" class="h-6 w-6 md:h-10 md:w-10 mr-2 rounded-full object-cover" alt="StyleWithAndrés"/>
-        <span class="self-center whitespace-nowrap bg-black bg-opacity-30 px-2 py-1 rounded-full font-bold text-xs md:text-sm tracking-wide">
-          <span class="text-white">StyleCon</span><span class="text-yellow-400">Andrés</span>
-        </span>
-      </a>
-      <ul class="flex space-x-2 md:space-x-4 ml-auto">
+    
+    <!-- Logo y nombre -->
+    <a href="https://flowbite.com/" class="flex items-center">
+      <img src="assets/logo.png" class="h-6 w-6 md:h-10 md:w-10 mr-2 rounded-full object-cover" alt="StyleWithAndrés"/>
+      <span class="self-center whitespace-nowrap bg-black bg-opacity-30 px-2 py-1 rounded-full font-bold text-xs md:text-sm tracking-wide">
+        <span class="text-white">StyleCon</span><span class="text-yellow-400">Andrés</span>
+      </span>
+    </a>
+
+    <!-- Tienda, Nosotros y carrito -->
+    <div class="flex items-center gap-2">
+      <ul class="flex space-x-2 md:space-x-4">
         <li>
           <a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link"
-            class="block text-black font-semibold px-2 py-0.5 md:px-3 md:py-1 border-0 rounded-full text-[10px] md:text-sm bg-gradient-to-r from-yellow-400 to-green-400 hover:from-yellow-300 hover:to-green-300 transition-all duration-200">
-            🛍️ Tienda
-        </a>
-      </li>
-  <li>
-    <a routerLink="/about" routerLinkActive="active-link"
-      class="block text-black font-semibold px-2 py-0.5 md:px-3 md:py-1 border-0 rounded-full text-[10px] md:text-sm bg-gradient-to-r from-yellow-400 to-green-400 hover:from-yellow-300 hover:to-green-300 transition-all duration-200">
-      ℹ️ Nosotros
-    </a>
-  </li>
-</ul>
-    </div>
-    <div class="flex items-center">
-      <button class="p-2 border rounded relative" (click)="toogleSideMenu()">
-        <div class="absolute -top-2 -left-2 rounded h-5 w-5 bg-black text-white text-xs">{{cart().length}}</div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            class="flex flex-col items-center text-black font-semibold px-3 py-1 border-0 rounded-full text-xs md:text-sm bg-gradient-to-r from-yellow-400 to-green-400 hover:from-yellow-300 hover:to-green-300 transition-all duration-200">
+            <span>🛍️</span>
+            <span>Tienda</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="active-link"
+            class="flex flex-col items-center text-black font-semibold px-3 py-1 border-0 rounded-full text-xs md:text-sm bg-gradient-to-r from-yellow-400 to-green-400 hover:from-yellow-300 hover:to-green-300 transition-all duration-200">
+            <span>ℹ️</span>
+            <span>Nosotros</span>
+          </a>
+        </li>
+      </ul>
+      <button class="p-2 border-0 rounded-full relative bg-gradient-to-r from-yellow-400 to-green-400 hover:from-yellow-300 hover:to-green-300 transition-all duration-200" (click)="toogleSideMenu()">
+        <div class="absolute -top-2 -left-2 rounded h-5 w-5 bg-black text-white text-xs flex items-center justify-center">{{cart().length}}</div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
         </svg>
       </button>
     </div>
+
   </div>
 </nav>
 
@@ -49,7 +54,7 @@
         <img class="w-6 h-6" [src]="product.images[0]" [alt]="product.title">
         <h3 class="text-sm">{{product.title}}</h3>
       </div>
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1">
         <p class="text-sm">${{product.price * 1000 | number:'1.0-0'}}</p>
         <button (click)="removeFromCart(product)" class="text-red-500 hover:text-red-700 font-bold">✕</button>
       </div>
